@@ -56,10 +56,25 @@
         <label for="old-date" class="input-lable">Enter Old Date:</label>
         <input type="date" id="old-date" class="input2" /><br>
 
+        <button type="button" onclick="calDifference()">
+            Calculate
+        </button>
+
         <div id="diff-date" class="diff-date">
             Difference Between Two Dates :
         </div>
     </div>
     
+    <script>
+        function calDifference(){
+            const currentDate= document.getElementById(current-date).value;
+            const oldDate= document.getElementById(old-date).value;
+            const difference= document.getElementById(diff-date);
+ 
+            const dateDiff= getYear(currentDate) - getYear(oldDate);
+            difference.innerText= `Difference Between Two Dates : ${dateDiff}`;
+        }
+    </script>
+
 </body>
 </html>
