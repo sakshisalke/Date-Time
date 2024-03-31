@@ -2,8 +2,64 @@
 <html>
 <head>
     <title>Date</title>
+
+    <style>
+        body{
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+            height: 100vh;
+        }
+        .title{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container{
+            height: 400px;
+            width: 500px;
+            display: block;
+            margin: 20px auto;
+            background-color: #71b3f6;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 1px #cde6ff;
+            padding: 50px;
+        }
+        .input-lable{
+            font-size: 27px;
+            text-align: center;
+        }
+        .input-field{
+            font-size: 27px;
+            border: 1px solid #0d5092;
+            border-radius: 5px;
+            margin: 20px 0 20px 40px;
+        }
+        .input2{
+            font-size: 27px;
+            border: 1px solid #0d5092;
+            border-radius: 5px;
+            margin: 50px 0 20px 80px;
+        }
+        .diff-date{
+            text-align: center;
+            font-size: 27px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Difference between two dates</h1>
+    <h1 class="title">Date</h1>
+    <div class="container">
+        <label for="current-date" class="input-lable">Enter Current Date:</label>
+        <input type="date" id="current-date" class="input-field" /><br>
+
+        <label for="old-date" class="input-lable">Enter Old Date:</label>
+        <input type="date" id="old-date" class="input2" /><br>
+
+        <div id="diff-date" class="diff-date">
+            Difference Between Two Dates :
+        </div>
+    </div>
+    
 </body>
 </html>
