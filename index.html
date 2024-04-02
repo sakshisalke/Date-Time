@@ -83,14 +83,31 @@
             const difference= document.getElementById('diff-date');
  
             let dateDiff= currentDate.getFullYear() - oldDate.getFullYear();
-            let monthDiff= currentDate.getMonth() - oldDate.getMonth();
+            let monthDiff= oldDate.getMonth() - currentDate.getMonth();
+            let dayDiff= oldDate.getDate() - currentDate.getDate();
 
             if(monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < oldDate.getDate()))
             {
                 dateDiff--;
             }
 
-            difference.innerText= `Difference Between Two Dates : ${dateDiff}`;
+            if(monthDiff < 0){
+                monthDiff= Math.abs(monthDiff);
+                if(dayDiff < 0){
+                    monthDiff= Math.abs(dayDiff);
+                    difference.innerText= `Date Difference : ${dayDiff} Days - ${monthDiff} Months - ${dateDiff} Years`;
+                }
+                else{
+                    difference.innerText= `Date Difference : ${dayDiff} Days - ${monthDiff} Months - ${dateDiff} Years`;
+                }
+                
+            }
+            else{
+                difference.innerText= `Date Difference : ${dayDiff} Days - ${monthDiff} Months - ${dateDiff} Years`;
+
+            }
+
+            // difference.innerText= `Difference Between Two Dates : ${dateDiff}`;
         }
     </script>
 
