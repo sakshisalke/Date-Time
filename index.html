@@ -86,7 +86,7 @@
             let monthDiff= oldDate.getMonth() - currentDate.getMonth();
             let dayDiff= oldDate.getDate() - currentDate.getDate();
 
-            if(monthDiff < 0 || (monthDiff === 0 && oldDate.getDate() < currentDate.getDate()))
+            if(monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < oldDate.getDate()))
             {
                 dateDiff--;
             }
