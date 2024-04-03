@@ -83,7 +83,7 @@
             const difference= document.getElementById('diff-date');
  
             let dateDiff= currentDate.getFullYear() - oldDate.getFullYear();
-            let monthDiff= oldDate.getMonth() - currentDate.getMonth();
+            let monthDiff= currentDate.getMonth() - oldDate.getMonth();
             let dayDiff= oldDate.getDate() - currentDate.getDate();
 
             if(monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < oldDate.getDate()))
